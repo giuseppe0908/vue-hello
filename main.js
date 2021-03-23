@@ -1,5 +1,5 @@
 //Stampare a schermo un messaggio all’interno di un h1, utilizzando i data.
-alert("Ciao non ti piace il titolo? cambialo nel input sotto l'imagine");
+// alert("Ciao non ti piace il titolo? cambialo nel input sotto l'imagine");
 var app = new Vue(
   {
     el:'#root',
@@ -13,7 +13,9 @@ var app = new Vue(
       change: function(message){
         if(this.color == 'black'){
             this.color ='white'
-        }else {
+        }else if (this.color =='white') {
+          this.color = 'yellow'
+        }else{
           this.color = 'black'
         }
 
