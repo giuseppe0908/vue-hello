@@ -7,17 +7,28 @@
       body{
         background-color: lightgrey;
       }
+      .yellow{
+        color: yellow;
+      }
+      .white{
+        color: white;
+      }
       .contenitore{
-        text-align: center;
+        /* text-align: center; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
   <body>
   <div id="root">
     <div class="contenitore">
-      <h1>{{message}}</h1>
+      <h1 :class="color"> {{message}}</h1>
       <img :src="srcc" :alt="descrizione">
-      <!-- <input v-model="message"> -->
+      <input v-model="message">
+      <button type="button" name="button"  @click="change()">cambia colore</button>
     </div>
 
 
